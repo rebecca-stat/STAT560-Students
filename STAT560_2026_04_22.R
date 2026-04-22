@@ -9,4 +9,4 @@ theta<-function(x,xdata){cor(data[x,1], data[x,2], method="spearman")}
 
 set.seed(4321)
 boot.results<-bootstrap(1:14, 1000, theta, data)
-quantile(boot.results$thetastar, c(.01, .99))
+quantile(boot.results$thetastar, c(.005, .995))
